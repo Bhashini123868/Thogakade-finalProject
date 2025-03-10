@@ -25,7 +25,7 @@ public class DashBoardFormController implements Initializable {
 
     @FXML
     void btnCustomerFormOnAction(ActionEvent event) throws IOException {
-        URL resource = this.getClass().getResource("/view/viewcustomer_form_controller.fxml");
+        URL resource = this.getClass().getResource("/view/customerForm.fxml");
 
         assert resource!=null;
         Parent lode = FXMLLoader.load(resource);
@@ -35,7 +35,7 @@ public class DashBoardFormController implements Initializable {
 
     @FXML
     void btnDashBoardOnAction(ActionEvent event) throws IOException {
-        URL resource = this.getClass().getResource("/view/dash-board-clone.fxml");
+        URL resource = this.getClass().getResource("/view/dashBoard.fxml");
 
         assert resource!=null;
         Parent lode = FXMLLoader.load(resource);
@@ -45,7 +45,7 @@ public class DashBoardFormController implements Initializable {
 
     @FXML
     void btnItemFormOnAction(ActionEvent event) throws IOException {
-        URL resource = this.getClass().getResource("/view/view_item_form.fxml");
+        URL resource = this.getClass().getResource("/view/itemForm.fxml");
 
         assert resource!=null;
         Parent lode = FXMLLoader.load(resource);
@@ -78,7 +78,7 @@ public class DashBoardFormController implements Initializable {
 
     @FXML
     void btnPlaceOrderFormOnAction(ActionEvent event) throws IOException {
-        URL resource = this.getClass().getResource("/view/view_order_form_controller.fxml");
+        URL resource = this.getClass().getResource("/view/orderForm.fxml");
 
         assert resource!=null;
         Parent load = FXMLLoader.load(resource);
@@ -88,7 +88,7 @@ public class DashBoardFormController implements Initializable {
 
     @FXML
     void btnSettingFormOnAction(ActionEvent event) throws IOException {
-        URL resource = this.getClass().getResource("/view/seeting_form_controller.fxml");
+        URL resource = this.getClass().getResource("/view/userForm.fxml");
 
         assert resource!=null;
         Parent lode = FXMLLoader.load(resource);
@@ -98,7 +98,7 @@ public class DashBoardFormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        URL resource = this.getClass().getResource("/view/dash-board-clone.fxml");
+        URL resource = this.getClass().getResource("/view/dashBoard.fxml");
 
         assert resource!=null;
         Parent lode = null;

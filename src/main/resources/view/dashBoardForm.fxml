@@ -9,54 +9,49 @@
 
 <AnchorPane prefHeight="415.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.dashBoard.DashBoardFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ad53a6" height="415.0" layoutX="-5.0" stroke="#ad53a6" strokeType="INSIDE" width="206.0" />
-      <JFXButton layoutX="9.0" layoutY="193.0" onAction="#btnItemFormOnAction" prefHeight="29.0" prefWidth="177.0" style="-fx-background-color: #502779;" text="Add Item " textFill="WHITE">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#150f30" height="415.0" layoutX="-5.0" stroke="#ad53a6" strokeType="INSIDE" width="206.0" />
+      <JFXButton layoutX="9.0" layoutY="193.0" onAction="#btnItemFormOnAction" prefHeight="29.0" prefWidth="177.0" style="-fx-background-color: #273c75;" text="Add Item " textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="9.0" layoutY="146.0" onAction="#btnCustomerFormOnAction" prefHeight="28.0" prefWidth="177.0" style="-fx-background-color: #502779;" text="Add Customer " textFill="WHITE">
+      <JFXButton layoutX="9.0" layoutY="146.0" onAction="#btnCustomerFormOnAction" prefHeight="28.0" prefWidth="177.0" style="-fx-background-color: #273c75;" text="Add Customer " textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></JFXButton>
-      <AnchorPane fx:id="lodeFormController" layoutX="200.0" prefHeight="415.0" prefWidth="641.0" style="-fx-background-color: #ffdced;">
+      <AnchorPane fx:id="lodeFormController" layoutX="200.0" prefHeight="415.0" prefWidth="641.0" style="-fx-background-color: #34495e;">
          <children>
-            <ImageView fitHeight="59.0" fitWidth="65.0" layoutX="577.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="415.0" fitWidth="642.0" layoutY="2.0">
                <image>
-                  <Image url="@../img/buy.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="22.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/buy%20moniter.png" />
+                  <Image url="@../image/OIP%20(1).jpeg" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="132.0" fitWidth="162.0" layoutX="17.0" layoutY="-13.0" pickOnBounds="true">
+      <JFXButton layoutX="9.0" layoutY="245.0" onAction="#btnPlaceOrderFormOnAction" prefHeight="29.0" prefWidth="177.0" style="-fx-background-color: #273c75;" text="Place Orders" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="9.0" layoutY="364.0" onAction="#btnLogOutOnAction" prefHeight="29.0" prefWidth="177.0" style="-fx-background-color: #95a5a6;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="9.0" layoutY="96.0" onAction="#btnDashBoardOnAction" prefHeight="28.0" prefWidth="177.0" style="-fx-background-color: #273c75;" text="DashBoard" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="9.0" layoutY="292.0" onAction="#btnSettingFormOnAction" prefHeight="29.0" prefWidth="177.0" style="-fx-background-color: #273c75;" text="Setting" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <ImageView layoutX="39.0">
          <image>
-            <Image url="@../img/Shop%20Logo.png" />
+            <Image url="@../image/thogakade.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="9.0" layoutY="245.0" onAction="#btnPlaceOrderFormOnAction" prefHeight="29.0" prefWidth="177.0" style="-fx-background-color: #502779;" text="Place Orders" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="9.0" layoutY="364.0" onAction="#btnLogOutOnAction" prefHeight="29.0" prefWidth="177.0" style="-fx-background-color: #f9aad0;" text="Log Out" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="9.0" layoutY="96.0" onAction="#btnDashBoardOnAction" prefHeight="28.0" prefWidth="177.0" style="-fx-background-color: #502779;" text="DashBoard" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="9.0" layoutY="292.0" onAction="#btnSettingFormOnAction" prefHeight="29.0" prefWidth="177.0" style="-fx-background-color: #502779;" text="Setting" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
    </children>
 </AnchorPane>

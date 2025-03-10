@@ -49,7 +49,7 @@ public class RegisterFormController {
     public void btnLogInOnAction(ActionEvent actionEvent) {
         Stage stage = new Stage();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/loginpage_form.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/loginpage.fxml"))));
             stage.show();
             ((Stage) txtemail.getScene().getWindow()).close();
         } catch (IOException e) {

@@ -41,7 +41,7 @@ public class LoginFormController {
                 if (basicTextEncryptor.decrypt(user.getPassword()).equals(txtPassword.getText())) {
                     System.out.println("Login!");
                     Stage stage = new Stage();
-                    stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/dashboard_form_controller.fxml"))));
+                    stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/dashBoardForm.fxml"))));
                     stage.show();
                     ((Stage) txtEmail.getScene().getWindow()).close();
                 } else {
@@ -60,7 +60,7 @@ public class LoginFormController {
     public void btnSinginOnAction(ActionEvent actionEvent) {
         Stage stage = new Stage();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Register_form.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/RegisterForm.fxml"))));
             stage.show();
             ((Stage) txtEmail.getScene().getWindow()).close();
         } catch (IOException e) {

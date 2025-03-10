@@ -8,83 +8,48 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="416.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.dashBoard.DashBoardController">
-   <children>
-      <AnchorPane fx:id="lodeFormController" prefHeight="415.0" prefWidth="630.0" style="-fx-background-color: #ffdced;">
-         <children>
-            <ImageView fitHeight="463.0" fitWidth="477.0" layoutX="111.0" layoutY="-52.0" pickOnBounds="true" preserveRatio="true">
+    <children>
+        <AnchorPane fx:id="lodeFormController" prefHeight="415.0" prefWidth="630.0" style="-fx-background-color: #34495e;">
+            <children>
+                <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#ebe7ef" height="89.0" layoutX="183.0" layoutY="24.0" stroke="#502779" strokeType="INSIDE" width="73.0" />
+                <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#eeeaf2" height="89.0" layoutX="375.0" layoutY="24.0" stroke="#502779" strokeType="INSIDE" width="73.0" />
+                <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#f1edf4" height="89.0" layoutX="279.0" layoutY="24.0" stroke="#502779" strokeType="INSIDE" width="73.0" />
+                <Label fx:id="lblOrders" contentDisplay="CENTER" layoutX="378.0" layoutY="26.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text="     Orders" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblCustomer" contentDisplay="CENTER" layoutX="187.0" layoutY="27.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text=" Customers" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblItem" contentDisplay="CENTER" layoutX="282.0" layoutY="26.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text="      Items" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="190.0" layoutY="76.0" text="Customers" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="300.0" layoutY="76.0" text="Items" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="392.0" layoutY="76.0" text="Orders" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+            <ImageView fitHeight="301.0" fitWidth="644.0" layoutX="-1.0" layoutY="117.0">
                <image>
-                  <Image url="@../img/store.png" />
+                  <Image url="@../image/OIP%20(1).jpeg" />
                </image>
             </ImageView>
-            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#502779" height="89.0" layoutX="212.0" layoutY="110.0" stroke="#502779" strokeType="INSIDE" width="73.0" />
-            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#502779" height="89.0" layoutX="404.0" layoutY="110.0" stroke="#502779" strokeType="INSIDE" width="73.0" />
-            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#502779" height="89.0" layoutX="308.0" layoutY="110.0" stroke="#502779" strokeType="INSIDE" width="73.0" />
-            <Label fx:id="lblOrders" contentDisplay="CENTER" layoutX="407.0" layoutY="112.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text="     Orders" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblCustomer" contentDisplay="CENTER" layoutX="216.0" layoutY="113.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text=" Customers" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblItem" contentDisplay="CENTER" layoutX="311.0" layoutY="112.0" prefHeight="82.0" prefWidth="65.0" style="-fx-background-color: #502779;" text="      Items" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="235.0" fitWidth="171.0" layoutX="457.0" layoutY="178.0" pickOnBounds="true" smooth="false">
-               <image>
-                  <Image url="@../img/selar%20man.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="189.0" fitWidth="157.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/shoping%20girl.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="59.0" fitWidth="65.0" layoutX="566.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/buy.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="4.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/buy%20moniter.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="239.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/icon-customer.gif" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="430.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/iconsorder.gif" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="334.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/icon-item.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="219.0" layoutY="162.0" text="Customers" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Label>
-            <Label layoutX="329.0" layoutY="162.0" text="Items" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Label>
-            <Label layoutX="421.0" layoutY="162.0" text="Orders" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-   </children>
+            </children>
+        </AnchorPane>
+    </children>
 </AnchorPane>

@@ -2,11 +2,7 @@ package edu.icet.controller.order;
 
 import com.jfoenix.controls.JFXComboBox;
 import edu.icet.db.DBConnection;
-import edu.icet.model.Customer;
-import edu.icet.model.Item;
-import edu.icet.model.Order;
-import edu.icet.model.OrderDetail;
-import edu.icet.service.custom.impl.CustomerServiceImpl;
+import edu.icet.model.*;
 import edu.icet.service.custom.impl.ItemServiceImpl;
 import edu.icet.service.custom.impl.OrderController;
 import javafx.animation.Animation;
@@ -31,6 +27,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import static edu.icet.service.custom.impl.CustomerServiceImpl.getInstance;
 
 public class OrderFormController implements Initializable {
 
@@ -68,7 +66,7 @@ public class OrderFormController implements Initializable {
     private Label lblnettotal1;
 
     @FXML
-    private TableView<?> tblOrders;
+    private TableView<Cart> tblOrders;
 
     @FXML
     private TextField txtAddress;
@@ -99,7 +97,7 @@ public class OrderFormController implements Initializable {
         clmPrice.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
         clmtotal.setCellValueFactory(new PropertyValueFactory<>("total"));
 
-        String itemcode = cmbItemCode.getValue();
+        String itemcode = (String) cmbItemCode.getValue();
         String description =txtDescription.getText();
         Integer qty = Integer.parseInt(txtQty.getText());
         Double unitPrice = Double.parseDouble(txtUnitPrice.getText());
@@ -108,7 +106,7 @@ public class OrderFormController implements Initializable {
         if (Integer.parseInt(txtHandOnStock.getText())<qty){
             new Alert(Alert.AlertType.WARNING,"OutOfStock").show();
         }else{
-            cartTms.add(new dto.Cart(itemcode,description,qty,unitPrice,total));
+            cartTms.add(new Cart(itemcode,description,qty,unitPrice,total));
             calcNetTotal();
         }
 
@@ -129,7 +127,7 @@ public class OrderFormController implements Initializable {
     void btnPlaceOrderAction(ActionEvent event) {
         String orderId = txtOrderId.getText();
         LocalDate orderDate = LocalDate.now();
-        String customerId = cmbCustId.getValue();
+        String customerId = (String) cmbCustId.getValue();
 
         List<OrderDetail> orderDetails = new ArrayList<>();
 
@@ -147,35 +145,36 @@ public class OrderFormController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         lodeTimeAndDate();
-        loadCustomerIds();
-        loadItemCodes();
+//        loadCustomerIds();
+//        loadItemCodes();
 
         cmbCustId.getSelectionModel().selectedItemProperty().addListener((observableValue, s, newVal) -> {
             if (newVal!=null){
-                searchCustomer(newVal);
+                searchCustomer((String) newVal);
             }
         });
         cmbItemCode.getSelectionModel().selectedItemProperty().addListener((observableValue, s, newVal) -> {
             if (newVal!=null){
-                SearchItem(newVal);
+                SearchItem((String) newVal);
             }
         });
     }
     private void calcNetTotal(){
         Double total=0.0;
-        for (dto.CartTM cartTM: cartTms){
-            total+=cartTM.getTotal();
+        for (Cart cart: cartTms){
+            total+=cart.getTotal();
         }
         lblnettotal.setText(total.toString()+"/=");
     }
 
-    private void loadItemCodes() {
-        cmbCustId.setItems(CustomerServiceImpl.getInstance().getCustomerId());
-    }
+//    private void loadItemCodes() {
+//        cmbItemCode.setItems(ItemServiceImpl.getInstance().getItemId());
+//    }
+//
+//    private void loadCustomerIds() {
+//        cmbCustId.setItems(getInstance().getCustomerId());
+//    }
 
-    private void loadCustomerIds() {
-        cmbItemCode.setItems(CustomerServiceImpl.getInstance().getCustomerId());
-    }
 
     private void lodeTimeAndDate() {
         Date date = new Date();
@@ -193,11 +192,11 @@ public class OrderFormController implements Initializable {
         timeline.play();
     }
     private void searchCustomer(String customerId){
-        Customer customer = CustomerServiceImpl.getInstance().searchCustomer(customerId);
+        Customer customer = getInstance().searchCustomer(customerId);
         txtName.setText(customer.getName());
         txtAddress.setText(customer.getAddress());
     }
-    ObservableList<dto.CartTM> cartTms = FXCollections.observableArrayList();
+    ObservableList<Cart> cartTms = FXCollections.observableArrayList();
 
     private void SearchItem(String itemcode){
         Item item = ItemServiceImpl.getInstance().searchItem(itemcode);
